@@ -6,11 +6,11 @@ import {
 } from "react-native-responsive-screen";
 import { StatusBar } from "expo-status-bar";
 import { LinearGradient } from "expo-linear-gradient";
-import Animated, { FadeIn, FadeOut, FadeInDown } from "react-native-reanimated";
-import { useRoute } from "@react-navigation/native";
+import Animated, { FadeInDown } from "react-native-reanimated";
+import { useRouter } from "expo-router";
 
 export default function Index() {
-  const router = useRoute();
+  const router = useRouter();
 
   return (
     <View className="flex-1 flex justify-end">
@@ -49,7 +49,7 @@ export default function Index() {
         {/* Start Button */}
         <Animated.View entering={FadeInDown.delay(300).springify()}>
           <TouchableOpacity
-            onPress={() => router.push("home")}
+            onPress={() => router?.push("home")}
             style={{ height: hp(7), width: wp(80) }}
             className="bg-rose-600 flex, items-center justify-center mx-auto rounded-full border-[2px] border-neutral-200"
           >
