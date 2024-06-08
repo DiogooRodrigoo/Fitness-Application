@@ -8,6 +8,7 @@ import {
 } from "react-native-responsive-screen";
 
 import Ionicons from "@expo/vector-icons/Ionicons";
+import ImageSlider from "../components/ImageSlider";
 
 export default function Home() {
   return (
@@ -48,6 +49,9 @@ export default function Home() {
       </View>
 
       {/* Image Slider */}
+      <View>
+        <ImageSlider />
+      </View>
     </SafeAreaView>
   );
 }
